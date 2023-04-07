@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightBlue"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".activitys.CaculateActivity">
+
+
+    <!--标题栏布局-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/rl_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height">
+
+        <TextView
+            android:id="@+id/tv_help"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_marginRight="@dimen/common_blank_size"
+            android:gravity="center_vertical"
+            android:text="帮助"
+            android:textColor="@drawable/text_selector"
+            android:textSize="@dimen/textsize_nomal" />
+
+        <ImageView
+            android:id="@+id/ima_call_input_dialog"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_marginRight="@dimen/common_blank_size"
+            android:scaleType="centerInside"
+            android:src="@mipmap/im_input" />
+
+    </androidx.appcompat.widget.Toolbar>
+    <!--计算过程及结果显示布局 android:layout_height="@dimen/show_input_height"-->
+    <RelativeLayout
+        android:id="@+id/ll_exp_re"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_toolbar"
+        android:layout_above="@+id/ll_below"
+        android:minHeight="250dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--输入的计算式-->
+            <EditText
+                android:id="@+id/tv_caculate_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:fadeScrollbars="false"
+                android:focusable="false"
+                android:maxLines="4"
+                android:paddingLeft="@dimen/common_blank_size"
+                android:paddingRight="@dimen/common_blank_size"
+                android:scrollbars="none"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/tv_expression"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:focusable="false"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/common_blank_size"
+                android:paddingRight="@dimen/common_blank_size"
+                android:singleLine="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/tv_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end|bottom"
+                android:layout_weight="1"
+                android:background="@null"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:gravity="right|bottom"
+                android:paddingRight="@dimen/common_blank_size"
+                android:singleLine="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="36sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+    <!--以下为键盘布局-->
+    <LinearLayout
+        android:id="@+id/ll_below"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_bc_keybord"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <include layout="@layout/ll_keyborad" />
+    </LinearLayout>
+</RelativeLayout>

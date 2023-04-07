@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorToolBar"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="caculator.bianfl.cn.abccaculator.activitys.MatrixActivity">
+    <!--标题栏布局-->
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:paddingBottom="10dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--第一个矩阵布局-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/bc_halftransparent"
+                android:scrollbars="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+
+                    android:text="A"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:entries="@array/matrixselfoperation"
+                    android:spinnerMode="dropdown" />
+
+                <Button
+                    android:id="@+id/btn_cclt1"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_unkeyboard"
+                    android:text="计算"
+                    android:textColor="@color/colorWhite" />
+
+                <Button
+                    android:id="@+id/btn_copy1"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_unkeyboard"
+                    android:text="复制"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/hsv_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/common_blank_size"
+                    android:gravity="center_vertical">
+
+                    <caculator.bianfl.cn.abccaculator.views.MatrixEditText
+                        android:id="@+id/et_matrix1"
+                        style="@style/ET_MatixStyle"
+                        android:layout_marginLeft="2dp"
+                        android:focusable="true"
+                        android:hint="请输入矩阵，并以空格分开"
+                        android:textColor="@color/colorText" />
+
+                    <TextView
+                        android:id="@+id/tv_matrix1"
+                        style="@style/ET_MatixStyle"
+                        android:layout_alignBottom="@id/et_matrix1"
+                        android:layout_alignTop="@id/et_matrix1"
+                        android:layout_toRightOf="@id/et_matrix1"
+                        android:textColor="@color/colorText" />
+                </RelativeLayout>
+            </HorizontalScrollView>
+
+            <!--第二个矩阵布局-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/bc_halftransparent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:text="B"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/matrixselfoperation"
+                    android:spinnerMode="dropdown" />
+
+                <Button
+                    android:id="@+id/btn_cclt2"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_unkeyboard"
+                    android:text="计算"
+                    android:textColor="@color/colorWhite" />
+
+                <Button
+                    android:id="@+id/btn_copy2"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_unkeyboard"
+                    android:text="复制"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/hsv_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/common_blank_size"
+                    android:gravity="center_vertical">
+
+                    <caculator.bianfl.cn.abccaculator.views.MatrixEditText
+                        android:id="@+id/et_matrix2"
+                        style="@style/ET_MatixStyle"
+                        android:layout_marginLeft="2dp"
+                        android:hint="请输入矩阵，并以空格分开"
+                        android:textColor="@color/colorText" />
+
+                    <TextView
+                        android:id="@+id/tv_matrix2"
+                        style="@style/ET_MatixStyle"
+                        android:layout_alignBottom="@id/et_matrix2"
+                        android:layout_alignTop="@id/et_matrix2"
+                        android:layout_toRightOf="@id/et_matrix2"
+                        android:textColor="@color/colorText" />
+                </RelativeLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGray" />
+
+    <LinearLayout
+        android:id="@+id/llr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:entries="@array/matrixoperation"
+            android:spinnerMode="dropdown" />
+
+        <Button
+            android:id="@+id/btn_cclt3"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_unkeyboard"
+            android:text="计算"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+</LinearLayout>

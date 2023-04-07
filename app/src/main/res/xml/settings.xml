@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="计算器">
+        <CheckBoxPreference
+            android:key="uses_radian"
+            android:defaultValue="false"
+            android:title="使用弧度"
+            android:summaryOn="计算器计算三角函数时使用弧度"
+            android:summaryOff="计算器计算三角函数时使用角度"/>
+    </PreferenceCategory>
+    <!--<PreferenceCategory android:title="翻译">-->
+        <!--<ListPreference-->
+            <!--android:title="选择在线发音人"-->
+            <!--android:key="speak_voice"-->
+            <!--android:defaultValue="0"-->
+            <!--android:entries="@array/speakvoice_name"-->
+            <!--android:entryValues="@array/speakvoice_value" />-->
+    <!--</PreferenceCategory>-->
+
+</PreferenceScreen>

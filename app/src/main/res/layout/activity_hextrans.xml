@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorToolBar"
+    tools:context="caculator.bianfl.cn.abccaculator.activitys.HexTransActivity">
+
+    <!--标题栏布局-->
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_blank_size"
+            android:text="二进制" />
+
+        <EditText
+            android:id="@+id/et_toBinery"
+            style="@style/HexTransEditText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_blank_size"
+            android:text="八进制" />
+
+        <EditText
+            android:id="@+id/et_toOctal"
+            style="@style/HexTransEditText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_blank_size"
+            android:text="十进制" />
+
+        <EditText
+            android:id="@+id/et_toInter"
+            style="@style/HexTransEditText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_blank_size"
+            android:text="十六进制" />
+
+        <EditText
+            android:id="@+id/et_toHex"
+            style="@style/HexTransEditText"/>
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_weight="0"
+        android:background="@color/color_bc_keybord">
+        <!--第一行-->
+        <TableRow style="@style/TableRowCommon">
+
+            <Button
+                android:id="@+id/btn_a"
+                style="@style/ButtonCommon"
+                android:text="a" />
+
+            <Button
+                android:id="@+id/btn_1"
+                style="@style/ButtonCommon"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/btn_2"
+                style="@style/ButtonCommon"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/btn_3"
+                style="@style/ButtonCommon"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/btn_clear"
+                style="@style/ButtonCommon"
+                android:layout_marginRight="0dp"
+                android:text="C"
+                android:textColor="@color/colorkeyBoardClear" />
+
+        </TableRow>
+        <!--第二行-->
+        <TableRow style="@style/TableRowCommon">
+
+            <Button
+                android:id="@+id/btn_b"
+                style="@style/ButtonCommon"
+                android:text="b"
+                android:layout_marginLeft="0dp"/>
+
+            <Button
+                android:id="@+id/btn_4"
+                style="@style/ButtonCommon"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/btn_5"
+                style="@style/ButtonCommon"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/btn_6"
+                style="@style/ButtonCommon"
+                android:text="6" />
+
+            <ImageButton
+                android:id="@+id/btn_del"
+                style="@style/ButtonCommon"
+                android:layout_marginRight="0dp"
+                android:src="@mipmap/btn_pad_del_n" />
+        </TableRow>
+        <!--第三行-->
+        <TableRow style="@style/TableRowCommon">
+
+            <Button
+                android:id="@+id/btn_c"
+                style="@style/ButtonCommon"
+                android:text="c"
+                android:layout_marginLeft="0dp"/>
+
+            <Button
+                android:id="@+id/btn_7"
+                style="@style/ButtonCommon"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/btn_8"
+                style="@style/ButtonCommon"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/btn_9"
+                style="@style/ButtonCommon"
+                android:text="9" />
+
+            <Button
+                android:id="@+id/btn_eb"
+                style="@style/ButtonCommon"
+                android:text="e"
+                android:layout_marginRight="0dp"/>
+        </TableRow>
+        <!--第四行-->
+        <TableRow style="@style/TableRowCommon">
+
+            <Button
+                android:id="@+id/btn_d"
+                style="@style/ButtonCommon"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="0dp"
+                android:text="d" />
+
+            <Button
+                android:id="@+id/btn_0"
+                style="@style/ButtonCommon"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="0dp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btn_f"
+                style="@style/ButtonCommon"
+                android:layout_marginBottom="0dp"
+                android:layout_marginRight="0dp"
+                android:text="f" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

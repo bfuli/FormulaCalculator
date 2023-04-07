@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/><!--没有该权限 在Android7之后无法安装-->
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppThemes"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".activitys.CaculateActivity"
+            android:theme="@style/AppThemes"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activitys.FormulaActivity"
+            android:theme="@style/AppThemes"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.MatrixActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.HexTransActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.EditActivity" android:screenOrientation="portrait"/>
+        <!-- <activity android:name=".activitys.TranslateActivity" /> -->
+        <activity
+            android:name=".activitys.SettingsActivity"
+            android:label="@string/title_activity_speak_settings"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.ShowPushActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- TODO 集成：1.2、添加推送所需要的服务和广播 -->
+<!--        <service-->
+<!--            android:name="cn.bmob.push.lib.service.PushService"-->
+<!--            android:exported="true"-->
+<!--            android:label="PushService"-->
+<!--            android:process=":bmobpush">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="cn.bmob.push.lib.service.PushService" />-->
+<!--            </intent-filter>-->
+<!--        </service>-->
+        <!-- 用于进程保活 -->
+<!--        <service-->
+<!--            android:name="cn.bmob.push.lib.service.PushNotifyService"-->
+<!--            android:process=":bmobpush" />-->
+
+<!--        <receiver android:name="cn.bmob.push.PushReceiver"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+
+<!--                &lt;!&ndash; 系统启动完成后会调用 &ndash;&gt;-->
+<!--                <action android:name="android.intent.action.BOOT_COMPLETED" />-->
+<!--                &lt;!&ndash; 解锁完成后会调用 &ndash;&gt;-->
+<!--                <action android:name="android.intent.action.USER_PRESENT" />-->
+<!--                &lt;!&ndash; 监听网络连通性 &ndash;&gt;-->
+<!--                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+
+        <!-- 第3步中创建的消息接收器，在这里进行注册 -->
+<!--        <receiver android:name=".service.PushMessageReceiver"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="cn.bmob.push.action.MESSAGE" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+        <!-- 接收心跳和唤醒的广播，要和PushService运行在同个进程 -->
+<!--        <receiver-->
+<!--            android:name="cn.bmob.push.PushNotifyReceiver"-->
+<!--            android:process=":bmobpush"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+
+<!--                &lt;!&ndash; 接收心跳广播的action &ndash;&gt;-->
+<!--                <action android:name="cn.bmob.push.action.HEARTBEAT" />-->
+<!--                &lt;!&ndash; 接收唤醒广播的action &ndash;&gt;-->
+<!--                <action android:name="cn.bmob.push.action.NOTIFY" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+
+        <activity android:name=".Logins.LoginActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".Logins.SignUpActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".Logins.EditPWActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.EquationActivity" android:screenOrientation="portrait"/>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+        <provider
+            android:name="cn.bmob.v3.util.BmobContentProvider"
+            android:authorities="caculator.bianfl.cn.abccaculator.BmobContentProvider">
+        </provider>
+    </application>
+
+</manifest>

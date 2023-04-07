@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorToolBar"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="caculator.bianfl.cn.abccaculator.activitys.EquationActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/sp_equation_kinds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:entries="@array/equationkinds"
+            android:spinnerMode="dialog"/>
+
+        <TextView
+            android:id="@+id/tv_equation_expressions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/textsize_big"
+            android:textColor="@color/colorBlue"/>
+
+        <LinearLayout
+            android:id="@+id/ll_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:minHeight="200dp"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"></LinearLayout>
+        <TextView
+            android:id="@+id/tv_equation_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:maxLines="4"
+            android:textColor="@color/colorBlue"
+            android:textSize="@dimen/textsize_nomal" />
+
+        <Button
+            android:id="@+id/btn_solve_equation"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_unkeyboard"
+            android:layout_marginTop="10dp"
+            android:text="确定"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textsize_nomal" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

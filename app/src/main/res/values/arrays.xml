@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="matrixselfoperation">
+        <item>转置</item>
+        <item>求逆</item>
+        <item>平方</item>
+        <item>立方</item>
+        <item>行列式</item>
+        <item>条件数</item>
+        <item>矩阵秩</item>
+    </array>
+    <array name="matrixoperation">
+        <item>A+B</item>
+        <item>A-B</item>
+        <item>A×B</item>
+        <item>A/B</item>
+        <item>B-A</item>
+        <item>B×A</item>
+        <item>B/A</item>
+    </array>
+    <array name="translateto">
+        <item>英语</item>
+        <item>中文</item>
+        <item>文言文</item>
+        <item>韩语</item>
+        <item>日语</item>
+        <item>法语</item>
+    </array>
+    <string-array name="speakvoice_name">
+        <item>普通女声</item>
+        <item>普通男声</item>
+        <item>特别男声</item>
+        <item>情感男声</item>
+    </string-array>
+    <string-array name="speakvoice_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="safequestions">
+        <item>你最喜欢的运动？</item>
+        <item>你最喜欢的美食？</item>
+        <item>你最喜欢的音乐？</item>
+        <item>你最感谢的老师？</item>
+        <item>你的人生格言？</item>
+        <item>你的家乡？</item>
+        <item>你的生日？</item>
+        <item>你的另一半？</item>
+    </string-array>
+    <string-array name="equationkinds">
+        <item>一元一次方程</item>
+        <item>一元二次方程</item>
+        <item>一元三次方程</item>
+        <item>二元一次方程组</item>
+        <item>三元一次方程组</item>
+    </string-array>
+</resources>

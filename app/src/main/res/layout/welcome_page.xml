@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlue"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:text="欢迎您"
+                android:textColor="@color/colorRed"
+                android:textSize="@dimen/textsize_bigger" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="您的支持是我进步的动力！在使用过程中如果有任何问题，欢迎通过应用商店的评论告诉我。"
+                android:textColor="@color/color_hide_divide"
+                android:textSize="@dimen/textsize_small" />
+
+            <Button
+                android:id="@+id/btn_synchro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_unkeyboard"
+                android:text="备份公式"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_nomal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="该操作会清空云端原有公式"
+                android:textColor="@color/color_hide_divide"
+                android:textSize="@dimen/textsize_small" />
+
+            <Button
+                android:id="@+id/btn_load"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/btn_unkeyboard"
+                android:text="导入云端公式"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_nomal" />
+
+            <Button
+                android:id="@+id/btn_update_pw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/btn_unkeyboard"
+                android:text="修改密码"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_nomal" />
+
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/btn_unkeyboard"
+                android:text="注销"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_nomal" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

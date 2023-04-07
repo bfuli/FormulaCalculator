@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorToolBar"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="caculator.bianfl.cn.abccaculator.activitys.ShowPushActivity">
+
+    <!--标题栏布局-->
+    <include layout="@layout/toolbar"/>
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:visibility="visible"
+        android:background="@drawable/progressbarbc"
+        android:max="100"
+        android:foregroundTintMode="screen"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+    <WebView
+        android:id="@+id/wv_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"></WebView>
+
+</LinearLayout>

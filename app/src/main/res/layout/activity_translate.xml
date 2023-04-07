@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorToolBar"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    tools:context="caculator.bianfl.cn.abccaculator.activitys.TranslateActivity">
+
+    <!--标题栏布局-->
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_translation"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="@dimen/common_blank_size"
+            android:background="@drawable/et_bc_recangle_focused"
+            android:gravity="top"
+            android:textColor="@color/colorWhite"
+            android:hint="请输入要翻译的文本"
+            android:padding="@dimen/common_blank_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_blank_size"
+            android:text="翻译结果：" />
+
+        <EditText
+            android:id="@+id/tv_trans_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_blank_size"
+            android:background="@drawable/et_bc_recangle_nofocus"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:gravity="top"
+            android:maxHeight="200dp"
+            android:minHeight="150dp"
+            android:padding="@dimen/common_blank_size"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_blank_size" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_transto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/common_blank_size"
+                android:entries="@array/translateto"
+                android:spinnerMode="dropdown" />
+
+            <ImageButton
+                android:id="@+id/img_speak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/common_blank_size"
+                android:layout_marginRight="@dimen/common_blank_size"
+                android:background="#00000000"
+                android:minWidth="45dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/index_voice1" />
+
+            <Button
+                android:id="@+id/btn_translate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/common_blank_size"
+                android:layout_marginRight="@dimen/common_blank_size"
+                android:layout_toLeftOf="@id/img_speak"
+                android:layout_toRightOf="@id/sp_transto"
+                android:background="@drawable/btn_unkeyboard"
+                android:text="翻译"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_nomal" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

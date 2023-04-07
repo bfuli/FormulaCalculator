@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'caculator.bianfl.cn.abccaculator'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "caculator.bianfl.cn.abccaculator"
+        minSdk 23
+        targetSdk 33
+        versionCode 29
+        versionName "6.1.0"
+
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']//此步骤 提供libs文件夹路径，为了找到相应的 .so文件
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    buildToolsVersion '33.0.1'
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.navigation:navigation-fragment:2.0.0-rc02'
+    implementation 'androidx.navigation:navigation-ui:2.0.0-rc02'
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
+//    testImplementation 'junit:junit:4.13.2'
+//    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+//    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation files('libs/Jama-1.0.3.jar')
+//    implementation files('libs/Bmob-Push-1.0.1-20170907.jar')
+//    implementation 'cn.bmob.android:http-legacy:1.0'
+//    implementation 'cn.bmob.android:bmob-sdk:3.6.3'
+    implementation 'com.daimajia.swipelayout:library:1.2.0@aar'
+
+    implementation 'io.github.bmob:android-sdk:3.8.21'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.8'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'com.squareup.okhttp3:okhttp:4.8.1'
+    implementation 'com.squareup.okio:okio:2.2.2'
+    implementation 'com.google.code.gson:gson:2.8.5'
+}

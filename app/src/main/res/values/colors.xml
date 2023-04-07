@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#7d5886</color>-->
+    <!--<color name="colorPrimaryDark">#7d5886</color>-->
+    <!--<color name="colorAccent">#6d473c</color>-->
+    <color name="colorPrimary">@color/colorLightBlue</color>
+    <color name="colorPrimaryDark">@color/colorLightBlue</color>
+    <color name="colorAccent">@color/colorBlue</color>
+    <color name="colorDarkBlue">#303F9F</color>
+    <color name="colorToolBar">@color/colorLightBlue</color>
+    <color name="colorRed">#EF0B21</color>
+    <color name="colorGray">#aa4e4e4e</color>
+    <color name="colorBlue">#d63f51b5</color>
+    <color name="colorLightBlue">#65EF61</color>
+    <color name="colorBlack">#000000</color>
+    <color name="color_bc_keybord">#D9D1C0</color>
+    <!--<color name="color_bc_keybord">#afdfe4</color>-->
+    <color name="color_bc_hidebottom">@color/colorWhite</color>
+    <color name="color_hide_divide">#e87e04</color>
+    <color name="colorSwipeHideTop">#ffa45d</color>
+    <color name="colorWhite">#ffffff</color>
+    <!--<color name="colorBtn_unKeyboard_unPressed">#50b7c1</color>-->
+    <!--<color name="colorBtn_unKeyBoard_Pressed">#00a6ac</color>-->
+    <!--<color name="colorBtn_unKeyboard_enabled">#9950b7c1</color>-->
+    <color name="colorBtn_unKeyboard_unPressed">@color/colorLightBlue</color>
+    <color name="colorBtn_unKeyBoard_Pressed">@color/colorBlue</color>
+    <color name="colorBtn_unKeyboard_enabled">#0ee8e3</color>
+    <color name="colorBtn_Keyboard_unPressed">#FFFFFF</color>
+    <color name="colorBtn_Keyboard_Pressed">#EFE1E1</color>
+    <color name="colorKeyboardText">#D6677DF7</color>
+    <!--<color name="colorBtn_Keyboard_unPressed">@color/colorBtn_unKeyboard_unPressed</color>-->
+    <!--<color name="colorBtn_Keyboard_Pressed">@color/colorAccent</color>-->
+    <!--<color name="colorKeyboardText">@color/colorWhite</color>-->
+    <color name="colorkeyBoardClear">#cb4e4e</color>
+    <color name="colorText">#000000</color><!--文本字体颜色-->
+    <color name="colorEdit">#eddda8</color>
+    <color name="colorTextPressed">#c7bebe</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#ffffffff</color>
+    <color name="black">#00000000</color>
+</resources>

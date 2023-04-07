@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorToolBar"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".activitys.CaculateActivity">
+
+    <LinearLayout
+        android:id="@+id/rl_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height">
+        <include layout="@layout/toolbar"/>
+    </LinearLayout>
+    <!--标题栏布局-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_toolbar"
+        android:layout_above="@+id/ll_below"
+        android:minHeight="250dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/ll_exp_re"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/tv_expression"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:focusable="false"
+                android:paddingLeft="@dimen/common_blank_size"
+                android:paddingRight="@dimen/common_blank_size"
+                android:singleLine="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="26sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--以下为键盘布局-->
+    <LinearLayout
+        android:id="@+id/ll_below"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_bc_keybord"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <include layout="@layout/ll_keyborad" />
+    </LinearLayout>
+</RelativeLayout>
